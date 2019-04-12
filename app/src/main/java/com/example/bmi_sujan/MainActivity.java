@@ -31,24 +31,30 @@ public class MainActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(EtHeight.getText().toString()))
                 {
                     EtHeight.setError("Enter your Height");
+                    EtHeight.requestFocus();
+                    return;
                 }
                 else if(TextUtils.isEmpty(EtWeight.getText().toString()))
                 {
                     EtHeight.setError("Enter your Weight");
+                    EtWeight.requestFocus();
+                    return;
                 }
 
-                double height,weight,bmiresult;
+                float height,weight,bmiresult;
 
-                height=Double.parseDouble(EtHeight.getText().toString());
-                weight=Double.parseDouble(EtHeight.getText().toString());
+                height=Float.parseFloat(EtHeight.getText().toString())/100;
+                weight=Float.parseFloat(EtWeight.getText().toString());
 
                 Bmi_Sujan bmi=new Bmi_Sujan(height,weight);
 
                  bmiresult=bmi.calculate();
-                 EtResult.setText(Double.toString(bmiresult));
+                 EtResult.setText(Float.toString(bmiresult));
 
                  Toast.makeText(MainActivity.this, bmi.BMICat(),Toast.LENGTH_LONG).show();
 
+                 InputMethodManager i=(InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                 i.hideSoftInputFromWindow(BtnCompute.getWindowToken(),InputMethodManager.RESULT_UNCHANGED_SHOWN);
 
                 }
         });

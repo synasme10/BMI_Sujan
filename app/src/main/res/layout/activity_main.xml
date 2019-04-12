@@ -92,10 +92,12 @@
         android:id="@+id/TvBmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-    android:text="YOUR BMI"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="25dp"
-        android:textSize="20sp"/>
+        android:text="YOUR BMI"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="155dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/BtnCompute"/>
 
     <EditText
         android:id="@+id/EtResult"
@@ -103,7 +105,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/TvBmi"
         android:layout_centerInParent="true"
-        android:textSize="20sp"/>
+        android:ems="2"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"
+        android:text="0"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"/>
 
 
 </RelativeLayout>

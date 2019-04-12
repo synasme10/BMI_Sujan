@@ -1,27 +1,31 @@
 package com.example.bmi_sujan;
 
-class Bmi_Sujan {
-    public double h,w,result;
+import java.text.DecimalFormat;
 
-    public Bmi_Sujan(double h,double w){
+class Bmi_Sujan {
+    public float h,w,result,roundbmi;
+
+    public Bmi_Sujan(float h,float w){
         this.h=h;
         this.w=w;
     }
 
-    public double calculate(){
-        result=w/(h/100*h/100);
-        return result;
+    public float calculate(){
+
+        result=w/(h*h);
+        roundbmi= (float) (Math.round(result*10)/10.0);
+        return roundbmi;
     }
 
     public String BMICat(){
-        if (result<18.5){
+        if (roundbmi<18.5){
             return "Underweight";
         }
-        else if(result>18.5 && result<24.9){
+        else if(roundbmi>18.5 && roundbmi<24.9){
             return "Normal Weight";
 
         }
-        else if(result>25 && result<29.9){
+        else if(roundbmi>25 && roundbmi<29.9){
             return "Overweight";
         }
         else{
