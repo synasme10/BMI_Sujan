@@ -36,9 +36,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/EtHeight"
         android:layout_alignLeft="@+id/EtHeight"
-        android:layout_marginTop="10dp"
-        />
-
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/TvWeight"
@@ -49,7 +47,6 @@
         android:layout_marginLeft="60dp"
         android:text="Your Weight :"
         android:textSize="20sp"/>
-
 
     <EditText
         android:id="@+id/EtWeight"
@@ -71,10 +68,7 @@
         android:textSize="20sp"
         android:layout_below="@id/EtWeight"
         android:layout_alignLeft="@+id/EtWeight"
-        android:layout_marginTop="10dp"
-
-        />
-
+        android:layout_marginTop="10dp" />
 
     <Button
         android:id="@+id/BtnCompute"
@@ -82,11 +76,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_below="@id/Tvkilogram"
-       android:layout_marginLeft="130dp"
+        android:layout_marginLeft="130dp"
         android:text="Compute BMI"
-        android:textSize="18dp"
-        />
-
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/TvBmi"
@@ -112,6 +104,5 @@
         android:gravity="center"
         android:textSize="30sp"
         android:layout_marginTop="10dp"/>
-
 
 </RelativeLayout>

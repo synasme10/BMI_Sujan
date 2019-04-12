@@ -1,7 +1,5 @@
 package com.example.bmi_sujan;
 
-import java.text.DecimalFormat;
-
 class Bmi_Sujan {
     public float h,w,result,roundbmi;
 
@@ -11,7 +9,6 @@ class Bmi_Sujan {
     }
 
     public float calculate(){
-
         result=w/(h*h);
         roundbmi= (float) (Math.round(result*10)/10.0);
         return roundbmi;
@@ -23,14 +20,12 @@ class Bmi_Sujan {
         }
         else if(roundbmi>18.5 && roundbmi<24.9){
             return "Normal Weight";
-
         }
         else if(roundbmi>25 && roundbmi<29.9){
             return "Overweight";
         }
         else{
             return "Obesity";
-
         }
     }
 }

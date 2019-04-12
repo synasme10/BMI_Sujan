@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(TextUtils.isEmpty(EtWeight.getText().toString()))
                 {
-                    EtHeight.setError("Enter your Weight");
+                    EtWeight.setError("Enter your Weight");
                     EtWeight.requestFocus();
                     return;
                 }
